@@ -1,5 +1,5 @@
 class SaveController < ApplicationController
   def save
-    p params
+    "Hello"
   end
 end

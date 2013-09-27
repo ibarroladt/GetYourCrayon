@@ -18,20 +18,12 @@ ActiveRecord::Schema.define(version: 20130926234928) do
 
   create_table "drawings", force: true do |t|
     t.text     "content"
-<<<<<<< HEAD
     t.integer  "website_id"
-=======
-    t.integer  "url_id_id"
->>>>>>> master
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   add_index "drawings", ["website_id"], name: "index_drawings_on_website_id", using: :btree
-=======
-  add_index "drawings", ["url_id_id"], name: "index_drawings_on_url_id_id", using: :btree
->>>>>>> master
 
   create_table "websites", force: true do |t|
     t.string   "url"

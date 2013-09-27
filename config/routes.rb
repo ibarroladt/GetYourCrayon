@@ -1,12 +1,12 @@
 GetYourCrayon::Application.routes.draw do
-  
+
   root 'welcome#index'
 
-  resources :websites, only: [:new] do
-    resources :drawings, only: [:new]
-  end
+  # resources :websites, only: [:new] do
+  #   resources :drawings, only: [:new]
+  # end
 
-  post '/save' => 'save#save', as: :save
+  post '/save' => 'save#save'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -48,7 +48,7 @@ GetYourCrayon::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

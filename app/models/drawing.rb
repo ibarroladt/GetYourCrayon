@@ -1,3 +1,3 @@
 class Drawing < ActiveRecord::Base
-  belongs_to :url_id
+  belongs_to :website
 end

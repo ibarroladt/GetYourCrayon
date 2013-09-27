@@ -7,6 +7,7 @@ GetYourCrayon::Application.routes.draw do
   # end
 
   post '/save' => 'save#save'
+  get '/retrieve' => 'save#retrieve'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

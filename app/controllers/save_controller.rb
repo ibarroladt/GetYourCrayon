@@ -6,6 +6,7 @@ class SaveController < ApplicationController
     p 'X' * 100
     @website = Website.find_or_create_by_url(params[:url])
     @drawing = @website.drawings.create(content: params[:json_string])
+    @tags = @drawing.tags << Tag.create(name: params[:tags])
     "Success"
   end
 

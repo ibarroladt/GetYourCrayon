@@ -12,9 +12,9 @@ class SaveController < ApplicationController
     tags_string = params[:tags]
     tags = tags_string.gsub(",", " ").split(" ")
     tags.each do |tag|
-      @tags = @drawing.tags << Tag.find_or_create_by_name(tag)
+      @tags = @drawing.tags << Tag.find_or_create_by_name(tag.downcase)
     end
-    "Success"
+    render :text => "Success"
   end
 
   def retrieve

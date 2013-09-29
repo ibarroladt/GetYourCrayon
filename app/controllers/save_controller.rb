@@ -10,10 +10,8 @@ class SaveController < ApplicationController
 
   def retrieve
     if params[:id]
-      #what to do if we get an id - grab the drawing at the specified id
-      website = Website.find_by_url(params[:url])
-      id = params[:id].to_i
-      json_string = website.drawings[id].content
+      # ID here refers to the index of the array of drawings for this website
+      json_string = grab_drawing(params[:url], params[:id])
       render :text => json_string
     else
       #what to do on initial page load - grab the latest drawing, also pass max id

@@ -3,13 +3,29 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  include ApplicationHelper
-  helper_method :make_html
-
-  def grab_drawing(url, id)
-    website = Website.find_by_url(url)
+  def grab_drawing(website, id)
     id = id.to_i
-    website.drawings[id].content
+    json_string = website.drawings[id].content
+    render :text => json_string
+  end
+
+  def retrieve_latest_drawing(website)
+    tag_objects = website.tags.order("created_at DESC").limit(5)
+    tags_html_string = make_html(tag_objects).join("")
+    json_string = website.drawings.last.content
+    max_index = website.drawings.length - 1
+    render :json => {"json_string" => json_string, "max_index" => max_index, "tags_html_string" => tags_html_string}.to_json
+  end
+
+  def find_random_urls(tag_objects)
+    Hash[tag_objects.collect {|v| [v.name, v.websites.sample.url] } ]
+  end
+
+  def make_html(tag_objects)
+    tags_url_hash = find_random_urls(tag_objects)
+    tags_url_hash.map do |k, v|
+      "<a href='#{v}'>#{k}</a>"
+    end
   end
 
 end

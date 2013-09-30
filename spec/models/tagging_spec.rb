@@ -8,18 +8,6 @@ describe Tagging do
       new_tagging.save
       new_tagging.should_not be_valid
     end
-
-      it 'with just drawing_id' do
-      new_tagging = Tagging.new(drawing_id: 2)
-      new_tagging.save
-      new_tagging.should_not be_valid
-    end
-
-      it 'with just tag_id' do
-      new_tagging = Tagging.new(tag_id: 2)
-      new_tagging.save
-      new_tagging.should_not be_valid
-    end
   end
 
   context 'with expected data' do

@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130930164226) do
   create_table "drawings", force: true do |t|
     t.text     "content"
     t.text     "unique_url"
+    t.integer  "impressions_count", default: 0
     t.integer  "website_id"
     t.datetime "created_at"
     t.datetime "updated_at"

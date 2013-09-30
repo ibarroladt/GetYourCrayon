@@ -3,7 +3,6 @@ class CreateImpressionsTable < ActiveRecord::Migration
     create_table :impressions, :force => true do |t|
       t.string :impressionable_type
       t.integer :impressionable_id
-      t.integer :user_id
       t.string :controller_name
       t.string :action_name
       t.string :view_name
@@ -21,7 +20,6 @@ class CreateImpressionsTable < ActiveRecord::Migration
     add_index :impressions, [:controller_name,:action_name,:request_hash], :name => "controlleraction_request_index", :unique => false
     add_index :impressions, [:controller_name,:action_name,:ip_address], :name => "controlleraction_ip_index", :unique => false
     add_index :impressions, [:controller_name,:action_name,:session_hash], :name => "controlleraction_session_index", :unique => false
-    add_index :impressions, :user_id
   end
 
   def self.down

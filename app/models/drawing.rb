@@ -6,9 +6,7 @@ class Drawing < ActiveRecord::Base
   validates :content, presence: true
   validates :website_id, presence: true
 
-  is_impressionable
-  is_impressionable :counter_cache => true
-
+  is_impressionable :counter_cache => true, :unique => :session_hash
   def tags=(tags_string)
     tags = tags_string.gsub(",", " ").split(" ")
     tags.each do |tag|

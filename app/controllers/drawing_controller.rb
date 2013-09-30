@@ -1,7 +1,10 @@
 class DrawingController < ApplicationController
 
+  impressionist unique: [:impressionable_type, :impressionable_id, :session_hash]
+
   def show
-    @d = Drawing.find_by_unique_url(params[:unique_url])
+    @drawing = Drawing.find_by_unique_url(params[:unique_url])
+    impressionist(@drawing)
   end
 
 end

@@ -29,6 +29,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'json'
 
+# Track impressions
+gem 'impressionist'
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.4' 
   gem 'capybara'

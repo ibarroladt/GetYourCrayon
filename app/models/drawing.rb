@@ -11,4 +11,4 @@ class Drawing < ActiveRecord::Base
       self.tags << Tag.find_or_create_by_name(tag.downcase)
     end
   end
-end
+end 

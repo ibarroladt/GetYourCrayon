@@ -29,6 +29,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'json'
 
+group :test, :development do
+  gem 'rspec-rails', '~> 2.4' 
+  gem 'capybara'
+end
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

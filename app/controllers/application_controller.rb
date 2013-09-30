@@ -10,11 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   def retrieve_latest_drawing(website)
-    tag_objects = website.tags.order("created_at DESC").limit(5)
-    tags_html_string = make_html(tag_objects).join("")
     json_string = website.drawings.last.content
     max_index = website.drawings.length - 1
-    render :json => {"json_string" => json_string, "max_index" => max_index, "tags_html_string" => tags_html_string}.to_json
+    render :json => {"json_string" => json_string, "max_index" => max_index, "tags_html_string" => tags_html_string(website)}.to_json
   end
 
   def find_random_urls(tag_objects)
@@ -26,6 +24,11 @@ class ApplicationController < ActionController::Base
     tags_url_hash.map do |k, v|
       "<a href='#{v}'>#{k}</a>"
     end
+  end
+
+  def tags_html_string(website)
+    tag_objects = website.tags.order("created_at DESC").limit(5)
+    tags_html_string = make_html(tag_objects).join("")
   end
 
 end

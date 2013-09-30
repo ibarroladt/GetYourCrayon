@@ -56,15 +56,19 @@ describe Drawing do
       end
 
 
-      # it 'takes a string' do 
-      #   d = Drawing.new
-      #   d.tags=(2).should raise_error(ArgumentError)
-      # end
+      it 'creates the right number of tags' do 
+        d = Drawing.create!(content:"sjkhdgf",website_id: 2)
+        d.tags=('one, two three')
+        d.reload
+        d.tags.length.should == 3
+      end
 
-      # it 'has method' do 
-      #   w = Website.create(url: "http://www.google.com")
-      #   expect(d = w.drawings.create(content: "s", tags: "tag1 tag2")).to change(.tags, :count).by(2)
-      # end
+      it 'creates the right tags names' do 
+        d = Drawing.create!(content:"sjkhdgf",website_id: 2)
+        d.tags=('one, two three')
+        d.reload
+        d.tags.order('name DESC')[0].name == "one"
+      end
   end
 
 end

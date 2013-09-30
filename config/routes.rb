@@ -6,6 +6,7 @@ GetYourCrayon::Application.routes.draw do
   #   resources :drawings, only: [:new]
   # end
 
+  get '/:unique_url', to: 'drawing#show'
   post '/save' => 'save#save'
   get '/retrieve' => 'save#retrieve'
 

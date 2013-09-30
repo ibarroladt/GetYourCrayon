@@ -5,7 +5,7 @@ class SaveController < ApplicationController
   def save
     @website = Website.find_or_create_by_url(params[:url])
     @drawing = @website.drawings.create(content: params[:json_string], tags: params[:tags])
-    render :text => "Success"
+    render :json => {"tags_html_string" => tags_html_string(@website)}.to_json
   end
   
   def retrieve

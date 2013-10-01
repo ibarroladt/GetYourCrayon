@@ -1,2 +1,6 @@
-<%= @drawing.website.url %>
+<%= link_to(@drawing.website.url , @drawing.website.url)%>
+<br>
 Hit Count: <%= @drawing.impressions_count %>
+<canvas id='gyc-drawing'style="position:absolute; top:20px;  z-index:100"; resize></canvas>
+
+<p id='gyc-json-string' style="display:none;"><%= @drawing.content %></p>

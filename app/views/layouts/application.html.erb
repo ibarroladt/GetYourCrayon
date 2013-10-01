@@ -9,6 +9,14 @@
 <body>
 
 <%= yield %>
-
+<script type="text/paperscript"  canvas="gyc-drawing">
+var jsonString = $('#gyc-json-string').html();
+console.log(project)
+project.importJSON(jsonString);
+project.activeLayer.scale(.5);
+</script>
 </body>
 </html>
+
+
+

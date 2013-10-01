@@ -19,6 +19,10 @@ tag_1 = Tag.create(name: 'sky')
 tag_2 = Tag.create(name: 'blue')
 tag_3 = Tag.create(name: 'red')
 
+100.times do
+  Tagging.create(tag_id: rand(1..50), drawing_id: rand(1..5))
+end
+
 draw1.tags.create(name: 'javier')
 draw1.tags.create(name: 'sky')
 

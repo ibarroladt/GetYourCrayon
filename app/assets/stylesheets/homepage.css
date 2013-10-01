@@ -1,0 +1,112 @@
+.getyourcrayon {
+    background-color: orange;
+    height: 40px;
+    width: 95%;
+    margin: auto;
+    font-size: 30px;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid gray;
+    font-family: sans-serif;
+    vertical-align: center;
+
+}
+
+.getyourcrayon p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 5px;
+}
+
+.chrome {
+    width: 95%;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.chrome > .gyc_info {
+    display: inline-block;
+    color: #848484;
+    width: 45%;
+    text-align: center;
+    font-size: 20px; 
+    font-family: sans-serif;   
+}
+
+.chrome > .download_extension_button {
+    width: 45%;
+    display: inline-block;
+    text-align: center;
+}
+
+.chrome > .download_extension_button > a {
+    text-decoration: none;
+    border: 3px solid gray;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px;
+    background-color: #2ac5d6;
+    color: white;
+    font-family: sans-serif;
+}
+
+.nochrome {
+    width: 95%;
+    margin:auto;
+    margin-top: 20px;
+}
+
+.nochrome > .info_nochrome {
+    display: inline-block;
+    width: 45%;
+    color: #848484;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.nochrome > .download_chrome_button {
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+}
+
+.nochrome > .download_chrome_button > a {
+    text-decoration: none;
+    border: 3px solid gray;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px;
+    background-color: #2ac5d6;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+
+.tags_section {
+    border-top: 2px solid gray;
+    width: 95%;
+    margin:auto;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+
+#tagCloud {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#tagCloud > a {
+  text-decoration: none;
+  color: #848484;
+  margin: 7px;
+  border: orange 2px solid;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+h2 {
+    color: black;
+    font-family: sans-serif;
+}

@@ -8,7 +8,6 @@ class SaveController < ApplicationController
 
   def save
     server_url = 'localhost:3000/'
-    
     @website = Website.find_or_create_by_url(params[:url])
     @drawing = @website.drawings.create(content: params[:json_string], tags: params[:tags])
     render :json => {"tags_html_string" => tags_html_string(@website),

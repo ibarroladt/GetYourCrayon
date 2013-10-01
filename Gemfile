@@ -32,6 +32,8 @@ gem 'json'
 # Track impressions
 gem 'impressionist'
 
+gem 'rails_12factor', group: :production
+
 group :test, :development do
   gem 'rspec-rails', '~> 2.4' 
   gem 'capybara'

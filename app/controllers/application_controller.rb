@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
 
   def retrieve_latest_drawing(website)
     json_string = website.drawings.last.content
-    p "*************************"
-    p website.drawings
     max_index = website.drawings.empty? ? nil : website.drawings.length - 1
     render :json => {"json_string" => json_string, "max_index" => max_index, "tags_html_string" => tags_html_string(website)}.to_json
   end

@@ -1,0 +1,6 @@
+#gyc-drawing {
+  display:inline-block;
+  z-index:100;
+  width:800px;
+  height:600px;
+}

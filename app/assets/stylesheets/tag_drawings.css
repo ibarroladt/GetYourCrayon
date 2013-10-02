@@ -1,0 +1,22 @@
+.tag_drawings {
+text-align: center;
+
+}
+
+h2 {
+	text-align: center;
+}
+
+.website_link {
+color:#0B88BE;
+text-decoration: none;
+font-family: sans-serif;
+}
+
+.uniq_url_link {
+color: gray;
+text-decoration: none;
+font-family: sans-serif;
+display: block;
+margin-bottom: 10px;
+}

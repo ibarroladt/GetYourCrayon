@@ -1,0 +1,29 @@
+  
+  <div class="getyourcrayon">
+    <p>getYourCrayon</p>
+  </div>
+  <div class="chrome">
+    <div class="gyc_info">
+      <p>You've got Chrome.  Yay.</p>
+    </div>
+    <div class="download_extension_button">
+      <a href="/">Download getYourCrayon</a>
+    </div>
+  </div>
+  <div class="nochrome">
+    <div class="info_nochrome">
+       <p>You need Chrome.  Come back with it to getYourCrayon.
+    </div>
+    <div class="download_chrome_button">
+      <a href="/">Get Chrome</a>
+    </div>
+  </div>
+
+  <div class="tags_section">
+  	<h2 id="tags_header"></h2>
+     <div id='tagCloud' data-maxcount="<%= @max_count %>">
+       <% @tags.each do |tag| %>
+       <a href="/" data-count="<%=tag.taggings_count %>"><%= tag.name %></a>
+       <% end %>
+     </div>
+  </div>

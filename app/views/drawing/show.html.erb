@@ -1,2 +1,7 @@
-<%= @drawing.website.url %>
+<%= link_to(@drawing.website.url , @drawing.website.url)%>
+<br>
 Hit Count: <%= @drawing.impressions_count %>
+<p>See this drawing in its full glory by downloading the Get Your Crayon extension.</p>
+<canvas id='gyc-drawing'></canvas>
+
+<p id='gyc-json-string' style="display:none;"><%= @drawing.content %></p>

@@ -16,7 +16,6 @@ class DrawingController < ApplicationController
         @unique_websites << website
       end
     end
-    p @unique_url
   end
 end
 

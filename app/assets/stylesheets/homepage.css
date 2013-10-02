@@ -95,15 +95,16 @@
 #tagCloud {
     margin-top: 20px;
     text-align: center;
+    margin:auto;
+    width: 40%;
 }
 
 #tagCloud > a {
   text-decoration: none;
   color: #848484;
-  margin: 7px;
-  border: orange 2px solid;
+  display:inline;
   border-radius: 30px;
-  padding: 5px;
+  float: left;
 }
 
 h2 {

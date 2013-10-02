@@ -21,8 +21,7 @@
 
   <div class="tags_section">
   	<h2 id="tags_header"></h2>
-     <% @tags = Tag.order("taggings_count DESC") %>
-     <div id='tagCloud'>
+     <div id='tagCloud' data-maxcount="<%= @max_count %>">
        <% @tags.each do |tag| %>
        <a href="/" data-count="<%=tag.taggings_count %>"><%= tag.name %></a>
        <% end %>

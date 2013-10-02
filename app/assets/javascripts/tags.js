@@ -1,10 +1,11 @@
 var cloudify = function() {
     var tagsArray = $('#tagCloud a');
-    var highCount = tagsArray.first().data('count');
+    var highCount = $('#tagCloud').attr('data-maxcount');
+
     for (var i=0; i<tagsArray.length; i++) {
         var tagLink = $(tagsArray[i]);
         var fontRatio = highCount / tagLink.data('count');
-        tagLink.css("font-size", (3 / fontRatio) + "em"); 
+        tagLink.css("font-size", (5 / fontRatio) + "em"); 
     }
 }
 

@@ -1,6 +1,26 @@
+.drawing_detail {
+	width: 95%;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-family: sans-serif;
+	color: gray;
+}
+
+.drawing_detail > a {
+	text-decoration: none;
+	color: #0B88BE;
+}
+
+#gyclink {
+	text-decoration: none;
+	color: #0B88BE;
+}
+
 #gyc-drawing {
   display:inline-block;
-  z-index:100;
+  z-index:1000;
   width:800px;
   height:600px;
 }
+

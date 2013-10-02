@@ -10,7 +10,7 @@ GetYourCrayon::Application.routes.draw do
   post '/save' => 'save#save'
   get '/retrieve' => 'save#retrieve'
   get '/:unique_url', to: 'drawing#show'
-
+  get '/tag/:tag_id' => 'drawing#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

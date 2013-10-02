@@ -9,13 +9,17 @@
     border: 3px solid gray;
     font-family: sans-serif;
     vertical-align: center;
-
 }
 
 .getyourcrayon p {
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 5px;
+}
+
+.getyourcrayon > p > a {
+    text-decoration: none;
+    color:white;
 }
 
 .chrome {
@@ -54,6 +58,7 @@
     width: 95%;
     margin:auto;
     margin-top: 20px;
+    
 }
 
 .nochrome > .info_nochrome {
@@ -85,10 +90,8 @@
 
 
 .tags_section {
-    border-top: 2px solid gray;
     width: 95%;
     margin:auto;
-    border-radius: 10px;
     margin-top: 35px;
 }
 

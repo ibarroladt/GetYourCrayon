@@ -1,7 +1,13 @@
-<%= link_to(@drawing.website.url , @drawing.website.url)%>
-<br>
-Hit Count: <%= @drawing.impressions_count %>
-<p>See this drawing in its full glory by downloading the Get Your Crayon extension.</p>
-<canvas id='gyc-drawing'></canvas>
-
-<p id='gyc-json-string' style="display:none;"><%= @drawing.content %></p>
+<div class="getyourcrayon">
+  <p><a href="http://www.getyourcrayon.com/">getYourCrayon</a></p>
+</div>
+<div class="drawing_detail">
+	<span>Painted on: </span><%= link_to(@drawing.website.url , @drawing.website.url)%>
+	<br>
+	Hit Count: <%= @drawing.impressions_count %>
+	<p>See this drawing in its full glory by downloading the <a id="gyclink" href="/">getYourCrayon</a> Chrome extension.</p>
+</div>
+<div class="canvas">
+	<canvas id='gyc-drawing'></canvas>
+	<p id='gyc-json-string' style="display:none;"><%= @drawing.content %></p>
+</div>

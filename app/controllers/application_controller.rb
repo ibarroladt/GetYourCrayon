@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   end
 
   def serverURL
-    "http://www.getyourcrayon.com"
+    "http://www.getyourcrayon.com/"
   end
   helper_method :serverURL
 

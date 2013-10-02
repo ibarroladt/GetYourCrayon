@@ -1,10 +1,10 @@
 <div class="getyourcrayon">
-  <p><a href="http://www.getyourcrayon.com/">getYourCrayon</a></p>
+  <p><a href="<%= serverURL %>">getYourCrayon</a></p>
 </div>
 <h2><%= @tag.name %></h2>
 <div class="tag_drawings">
   <% @unique_websites.each do |website| %>
-  <p><a class="website_link" href="http://www.getyourcrayon.com/<%= website.url %>" target="_blank"><%= website.url %></a></p>
+  <p><a class="website_link" href="<%= website.url %>" target="_blank"><%= website.url %></a></p>
   	    <% @website_drawings = [] %> 
 	  	<% @website_drawings_taggings = [] %>
 	  	<% @website_drawings_taggings_specific = [] %>
@@ -41,7 +41,7 @@
 	  	<% end %>
 
 	  	<% @website_drawings_specific_unique.each do |drawing| %>
-	  	<a class="uniq_url_link" href="http://www.getyourcrayon.com/<%= drawing.unique_url %>" target="_blank"><%= drawing.unique_url %></a>
+	  	<a class="uniq_url_link" href="<%= serverURL %><%= drawing.unique_url %>" target="_blank"><%= drawing.unique_url %></a>
 	  	<% end %>
   
   <% end %>   

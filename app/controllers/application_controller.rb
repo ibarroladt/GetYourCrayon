@@ -31,4 +31,9 @@ class ApplicationController < ActionController::Base
     tags_html_string = make_html(tag_objects).join("")
   end
 
+  def serverURL
+    "/"
+  end
+  helper_method :serverURL
+
 end

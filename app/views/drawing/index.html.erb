@@ -1,5 +1,5 @@
 <div class="getyourcrayon">
-  <p><a href="/">getYourCrayon</a></p>
+  <p><a href="<%= serverURL %>">getYourCrayon</a></p>
 </div>
 <h2><%= @tag.name %></h2>
 <div class="tag_drawings">
@@ -41,7 +41,7 @@
 	  	<% end %>
 
 	  	<% @website_drawings_specific_unique.each do |drawing| %>
-	  	<a class="uniq_url_link" href="/<%= drawing.unique_url %>" target="_blank"><%= drawing.unique_url %></a>
+	  	<a class="uniq_url_link" href="<%= serverURL %><%= drawing.unique_url %>" target="_blank"><%= drawing.unique_url %></a>
 	  	<% end %>
   
   <% end %>   

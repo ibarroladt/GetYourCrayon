@@ -1,17 +1,15 @@
 require 'json'
 
-
-
 class SaveController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
 
   def save
-    server_url = 'localhost:3000/'
-    @website = Website.find_or_create_by_url(params[:url])
-    @drawing = @website.drawings.create(content: params[:json_string], tags: params[:tags])
-    render :json => {"tags_html_string" => tags_html_string(@website),
-                     "unique_url" => (server_url + @drawing.unique_url) }.to_json
+    server_url = 'http://localhost:3000/'
+    website = Website.find_or_create_by_url(params[:url])
+    drawing = website.drawings.create(content: params[:json_string], tags: params[:tags])
+    render :json => {"tags_html_string" => tags_html_string(website),
+                     "unique_url" => (server_url + drawing.unique_url) }.to_json
   end
   
   def retrieve

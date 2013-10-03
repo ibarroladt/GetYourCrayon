@@ -39,7 +39,7 @@
 	  	<% end %>
 
 	  	<% @website_drawings_specific_unique.each do |drawing| %>
-	  	<a class="uniq_url_link" href="<%= serverURL %><%= drawing.unique_url %>" target="_blank"><%= drawing.unique_url %></a>
+	  	<a class="uniq_url_link" href="<%= website.url %>" target="_blank"><%= drawing.unique_url %></a>
 	  	<% end %>
   
   <% end %>   

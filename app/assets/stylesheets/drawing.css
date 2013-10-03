@@ -51,3 +51,6 @@
   margin-top:20px;
 }
 
+#gyc-save-confirm, #gyc-twitter {
+  display:none;
+}

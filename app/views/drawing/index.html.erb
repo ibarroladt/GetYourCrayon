@@ -1,6 +1,7 @@
 <div class="getyourcrayon">
   <p><a href="<%= serverURL %>">getYourCrayon</a></p>
 </div>
+<div class="content">
 <h2><%= @tag.name %></h2>
 <div class="tag_drawings">
   <% @unique_websites.each do |website| %>
@@ -45,4 +46,5 @@
 	  	<% end %>
   
   <% end %>   
+	</div>
 </div>

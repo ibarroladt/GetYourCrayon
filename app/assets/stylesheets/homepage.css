@@ -1,6 +1,11 @@
+body {
+   background-color:rgba(224, 224, 224, 0.701961); 
+}
+
+
 .getyourcrayon {
     background-color: rgba(63, 141, 143, 0.8);
-    height: 40px;
+    height: 80px;
     position:absolute;
     left:0;
     top:0;
@@ -12,6 +17,10 @@
     vertical-align: center;
 }
 
+.content {
+    margin-top:100px;
+}
+
 .getyourcrayon p {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -21,6 +30,11 @@
 .getyourcrayon > p > a {
     text-decoration: none;
     color:white;
+    font-size: 60px;
+}
+
+.drawing_detail{
+    margin-top:100px; 
 }
 
 .chrome {

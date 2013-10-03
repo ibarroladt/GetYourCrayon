@@ -33,7 +33,7 @@ h1 {
 }
 
 .title_head a:hover {
-    color:rgb(255,162,5);
+    color:rgba(255,162,5,0.6);
     transition:color 0.7s linear;
 }
 

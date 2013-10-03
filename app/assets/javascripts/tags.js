@@ -12,5 +12,17 @@ var cloudify = function() {
     }
 }
 
+
+// var tagPop = function(){
+//   $('#tagCloud a').hover(function(){
+//     $(this).css('color', 'black');
+//   }, function() {
+//     $(this).css('font-size', newSize);
+//   });
+// };
+
+
 $(document).ready(cloudify);
 $(document).on('page:load', cloudify);
+// $(document).ready(tagPop);
+// $(document).on('page:load', tagPop);

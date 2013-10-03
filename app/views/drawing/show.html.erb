@@ -1,13 +1,10 @@
-<div class="getyourcrayon">
-  <p><a href="<%= serverURL %>">getYourCrayon</a></p>
-</div>
 <div class="drawing_detail">
-	<span>Painted on: </span><%= link_to(@drawing.website.url , @drawing.website.url)%>
-	<br>
-	Hit Count: <%= @drawing.impressions_count %>
 	<p>See this drawing in its full glory by downloading the <a id="gyclink" href="<%= serverURL %>">getYourCrayon</a> Chrome extension.</p>
 </div>
 <div class="canvas">
+  <div class="canvasheader">
+    <%= link_to(@drawing.website.url , @drawing.website.url)%>
+  </div>
 	<canvas id='gyc-drawing'></canvas>
 	<p id='gyc-json-string' style="display:none;"><%= @drawing.content %></p>
 </div>

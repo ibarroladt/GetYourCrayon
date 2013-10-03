@@ -5,9 +5,11 @@ function downloadInstructions(){
 	}
 	else if (BrowserDetect.browser == "Chrome" && chrome.app.isInstalled == false){
 		$('.nochrome').hide();
+		$('.chrome').hide(); // for presentation //
 	}
 	else{
 		$('.chrome').hide();
+		$('.nochrome').hide(); // for presentation //
 	}
 };
 
@@ -18,9 +20,12 @@ function downloadExtension(){
 	});
 }
 
-
-
 $(document).ready(function(){
 	downloadInstructions();
-    downloadExtension();
+  downloadExtension();
+});
+
+$(document).on('page:load', function(){
+	downloadInstructions();
+	downloadExtension();
 });

@@ -3,10 +3,10 @@ require 'spec_helper'
 describe Tagging do 
 
   context 'with invalid input' do
-    it 'with no drawing_id and no tag_id ' do
+    it 'with drawing_id and no tag_id ' do
       new_tagging = Tagging.new
       new_tagging.save
-      new_tagging.should_not be_valid
+      new_tagging.should be_valid
     end
   end
 

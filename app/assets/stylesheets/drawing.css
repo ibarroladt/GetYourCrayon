@@ -1,6 +1,56 @@
+.drawing_detail {
+	width: 95%;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-family: sans-serif;
+	color: gray;
+}
+
+.drawing_detail > a {
+	text-decoration: none;
+	color: #0B88BE;
+}
+
+#gyclink {
+	text-decoration: none;
+	color: #0B88BE;
+}
+
+.canvas {
+  background: white;
+  width:900px;
+  border-radius: 15px;
+  margin: auto;
+  /*border: solid 1px rgba(255, 0, 0, 0.4);*/
+  /*box-shadow:2px 2px 50px 2px gray; */
+}
+.canvasheader{
+  height:40px;
+  background-color: rgba(255, 0, 0, 0.62);
+  text-align: center;
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+}
+.canvasheader a{
+  text-decoration: none;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  margin-top: 10px; 
+  color: white;
+
+}
+
 #gyc-drawing {
-  display:inline-block;
-  z-index:100;
+  display:block;
+  z-index:1000;
   width:800px;
   height:600px;
+  margin: auto;
+  margin-top:20px;
+}
+
+#gyc-save-confirm, #gyc-twitter {
+  display:none;
 }

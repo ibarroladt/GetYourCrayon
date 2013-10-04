@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/pbkgodffljfhdlinelnhklhcdoiedbej">
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <title>GetYourCrayon</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header class="getyourcrayon">
+</header>
+<div class='title_head'><h1><a href="<%= serverURL %>">getYourCrayon</a></h1></div>
 <%= yield %>
+
 <script type="text/paperscript"  canvas="gyc-drawing">
 var jsonString = $('#gyc-json-string').html();
 project.importJSON(jsonString);
 var point = new Point(-160,-160);
-project.activeLayer.scale(.5).translate(point);</script>
+project.activeLayer.scale(.4).translate(point);</script>
 </body>
-<footer>
-  <p> 
-    <a href="/"></a>
-  </p>
-  </footer>
+
 </html>
 
 

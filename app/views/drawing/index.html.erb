@@ -1,0 +1,47 @@
+<div class="content">
+<h2><%= @tag.name %></h2>
+<div class="tag_drawings">
+  <% @unique_websites.each do |website| %>
+  <p><a class="website_link" href="<%= website.url %>" target="_blank"><%= website.url %></a></p>
+  	    <% @website_drawings = [] %> 
+	  	<% @website_drawings_taggings = [] %>
+	  	<% @website_drawings_taggings_specific = [] %>
+	  	<% @website_drawings_specific = [] %>
+	  	<% @website_drawings_specific_unique = [] %>
+
+	  	
+	  	<% website.drawings.each do |drawing| %>
+	  		<% @website_drawings << drawing %>
+	  	<% end %>
+
+
+	  	<% @website_drawings.each do |drawing| %> 
+	  		<% drawing.taggings.each do |tagging|  %>
+	  			<% @website_drawings_taggings << tagging %>
+	  		<% end %>
+	  	<% end %>
+
+	  	<% @website_drawings_taggings.each do |tagging|  %>
+	  		<% if tagging.tag_id == @tag.id %>
+	  		  <% @website_drawings_taggings_specific << tagging %>
+	  		<% end %>
+	    <% end %>
+
+
+	  	<% @website_drawings_taggings_specific.each do |tagging|  %>
+	  		<% @website_drawings_specific << Drawing.find(tagging.drawing_id) %>
+	  	<% end %>
+
+        <% @website_drawings_specific.each do |drawing|  %>
+	  		<% unless @website_drawings_specific_unique.include?(drawing) %>
+	  		  <% @website_drawings_specific_unique << drawing %>
+	  		<% end %>
+	  	<% end %>
+
+	  	<% @website_drawings_specific_unique.each do |drawing| %>
+	  	<a class="uniq_url_link" href="<%= website.url %>" target="_blank"><%= drawing.unique_url %></a>
+	  	<% end %>
+  
+  <% end %>   
+	</div>
+</div>

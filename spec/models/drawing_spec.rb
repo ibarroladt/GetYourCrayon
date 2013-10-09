@@ -52,9 +52,8 @@ describe Drawing do
   context '#tags=' do
       it 'has method' do 
         d = Drawing.new
-        d.should respond_to(:tags= )
+        d.should respond_to(:tags=)
       end
-
 
       it 'creates the right number of tags' do 
         d = Drawing.create!(content:"sjkhdgf",website_id: 2)
@@ -68,6 +67,31 @@ describe Drawing do
         d.tags=('one, two three')
         d.reload
         d.tags.order('name DESC')[0].name == "one"
+      end
+  end
+
+   context 'create_url' do
+      it 'has method' do 
+        d = Drawing.new
+        d.should respond_to(:create_url )
+      end
+
+      it 'creates the right number of tags' do 
+        d = Drawing.create!(content:"sjkhdgf",website_id: 2)
+        Drawing.last.unique_url.length.should eq 5
+      end
+  end
+
+  context 'set_unique_url' do
+      it 'has method' do 
+        d = Drawing.new
+        d.should respond_to(:set_unique_url )
+      end
+
+      it 'creates a unique_url' do 
+        d = Drawing.create!(content:"sjkhdgf",website_id: 2)
+        u = Drawing.last.unique_url
+        expect(d.set_unique_url(u)).to eq "repeat"
       end
   end
 

@@ -37,6 +37,11 @@ h1 {
     transition:color 0.7s linear;
 }
 
+.google-badge {
+    width:206px;
+    margin:auto;
+}
+
 .content {
     margin-top:50px;
 }

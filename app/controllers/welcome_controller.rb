@@ -7,7 +7,13 @@ class WelcomeController < ApplicationController
 
   def search
     pull = Tag.where("name = ?", params[:search_input])
-    @max_count = pull.first.taggings_count
-    @tags = pull.shuffle
+    p "*" * 50
+    p pull
+    if pull.empty?
+      redirect_to root_path
+    else
+      @max_count = pull.first.taggings_count
+      @tags = pull.shuffle
+    end
   end
 end

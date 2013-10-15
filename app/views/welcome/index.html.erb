@@ -16,6 +16,13 @@
     </div>
   </div>
   <div class='google-badge'><%= link_to image_tag("webstorebadge.png"), "https://chrome.google.com/webstore/detail/pbkgodffljfhdlinelnhklhcdoiedbej" %></div>
+  <div class='search_bar'>
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag(:q, "Tag Search:") %>
+      <%= text_field_tag(:search_input) %>
+      <%= submit_tag("Search") %>
+    <% end %>
+  </div>
   <div class="tags_section">
   	<h2 id="tags_header"></h2>
      <div id='tagCloud' data-maxcount="<%= @max_count %>">

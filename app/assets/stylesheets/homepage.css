@@ -94,6 +94,15 @@ h1 {
     font-family: sans-serif;
 }
 
+.search_bar {
+    margin:30px auto;
+    width:450px;
+}
+
+#search_input {
+    width:300px;
+}
+
 .nochrome {
     width: 95%;
     margin:auto;

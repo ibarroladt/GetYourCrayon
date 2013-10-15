@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
     p "*" * 50
     p pull
     if pull.empty?
-      redirect_to root_path
+      @no_results = true
     else
       @max_count = pull.first.taggings_count
       @tags = pull.shuffle

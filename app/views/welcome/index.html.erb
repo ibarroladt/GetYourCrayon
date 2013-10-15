@@ -22,12 +22,16 @@
       <%= submit_tag("Search", class: 'search_button') %>
     <% end %>
   </div>
-  <div class="tags_section">
-  	<h2 id="tags_header"></h2>
-     <div id='tagCloud' data-maxcount="<%= @max_count %>">
-       <% @tags.each do |tag| %>
-       <a href="<%= serverURL %>tag/<%= tag.id %>" data-count="<%=tag.taggings_count %>"><%= tag.name %></a>
-       <% end %>
+  <% if @no_results %>
+    <%= render "none" %>
+  <% else %>
+    <div class="tags_section">
+    	<h2 id="tags_header"></h2>
+       <div id='tagCloud' data-maxcount="<%= @max_count %>">
+         <% @tags.each do |tag| %>
+         <a href="<%= serverURL %>tag/<%= tag.id %>" data-count="<%=tag.taggings_count %>"><%= tag.name %></a>
+         <% end %>
+       </div>
      </div>
-   </div>
-  </div>
+    </div>
+  <% end %>

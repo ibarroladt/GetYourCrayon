@@ -96,17 +96,38 @@ h1 {
 
 .search_bar {
     margin:30px auto;
-    width:375px;
+    width:430px;
 }
 
 #search_input {
-    width:300px;
-    height:30px;
+    display:inline-block;
+    width:350px;
+    height:25px;
     border-radius:5px;
+    border:solid gray 1px;
+    font-size:16px;
+    padding:10px;
+}
+
+#search_input:focus {
+    outline:0;
+    box-shadow:0 0 8px rgba(63, 141, 143, 0.8);
+    transition:box-shadow 0.4s linear;
 }
 
 .search_button {
+    display:inline-block;
     font-size: 2em;
+    border-radius:5px;
+    border:solid gray 1px;
+    background-color:white;
+    vertical-align: bottom;
+}
+
+.search_button:hover {
+    outline:0;
+    box-shadow:0 0 8px rgba(63, 141, 143, 0.8);
+    transition:box-shadow 0.4s linear;
 }
 
 .nochrome {
@@ -147,16 +168,15 @@ h1 {
 .tags_section {
     width: 95%;
     margin:auto;
-    margin-top: 35px;
 }
 
 #tagCloud {
     margin-top: 20px;
     text-align: center;
     margin:auto;
-    width: 50%;
+    width: 60%;
     height:400px;
-    padding:10px;
+    padding:auto;
 }
 
 #tagCloud > a {

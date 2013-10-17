@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def grab_drawing(website, id)
     id = id.to_i
-    json_string = website.drawings[id].content
+    json_string = website.drawings.order("created_at")[id].content
     render :text => json_string
   end
 
